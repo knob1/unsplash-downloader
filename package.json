@@ -1,0 +1,21 @@
+{
+  "name": "unsplash-downloader",
+  "version": "1.0.0",
+  "description": "little node.js helper to download every photo from the wonderful unsplash.com",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "unsplash.com",
+    "downloader",
+    "pictures",
+    "unsplash"
+  ],
+  "author": "knob1",
+  "license": "MIT",
+  "dependencies": {
+    "jsdom": "^1.5.0",
+    "request": "^2.51.0"
+  }
+}

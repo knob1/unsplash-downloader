@@ -53,7 +53,7 @@ function pageRequest(page) {
 }
 
 function downloadStarter(){
-	if(fileQueue < maxFileQueue){
+	if(fileQueue < maxFileQueue && arrayCounter <= linkArray.length){
 		downloadImage(linkArray[arrayCounter]);
 	}
 }
@@ -67,13 +67,9 @@ function downloadImage(photoUrl){
 		console.log(writtenPhoto+'.jpg completed!');
 		writtenPhoto++;
 		fileQueue--;
-		if(arrayCounter <= linkArray.length){
-			downloadStarter();
-		}
-	});
-	if(arrayCounter <= linkArray.length) {
 		downloadStarter();
-	}
+	});
+	downloadStarter();
 }
 
 function CrawlPage(page){
